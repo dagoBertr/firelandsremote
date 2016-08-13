@@ -1,0 +1,72 @@
+<HBProfile>
+
+Profile Developer: Zojak 
+Farm zone: Firelands
+Thanks to: EchoTiger/Azyul, dellza
+
+
+<Name>Firelands Multi Profile V0.5 Hardcore mining</Name>
+
+<MinFreeBagSlots>2</MinFreeBagSlots>
+<MinDurability>.2</MinDurability>
+
+
+
+
+<MailGrey>False</MailGrey>
+<MailWhite>false</MailWhite>
+<MailGreen>False</MailGreen>
+<MailBlue>False</MailBlue>
+<MailPurple>false</MailPurple>
+
+<SellGrey>True</SellGrey>
+<SellWhite>True</SellWhite>
+<SellGreen>True</SellGreen>
+<SellBlue>True</SellBlue>
+<SellPurple>True</SellPurple>
+
+<ProtectedItems>
+	<Item Name="Elementium Lockbox" Entry="68729" />
+	<Item Name="Potion of Treasure Finding" Entry="58488" />
+  <Item Name="Findle's Loot-A-Rang" Entry="109167" />
+</ProtectedItems>
+<Vendors>
+	<Vendor Name="Naresir Stormfury" Entry="54401" Type="Repair" X="-530.6389" Y="329.559" Z="115.4722"/> 
+</Vendors>
+
+<Mailboxes>
+</Mailboxes>
+
+<AvoidMobs>
+  <Mob Name="Shannox" Entry="53691" />
+  <Mob Name="Rageface" Entry="53695" />
+  <Mob Name="Riplimb" Entry="53694" />
+</AvoidMobs>
+
+
+<Blacklist>
+  <Mob Name="Shannox" Id="53691" Flags="Pull,Combat" />
+  <Mob Name="Rageface" Id="53695" Flags="Pull,Combat" />
+  <Mob Name="Riplimb" Id="53694" Flags="Pull,Combat" />
+</Blacklist> 
+<Blackspots>
+<Blackspot X="-119.7428" Y="120.1436" Z="44.34217" Radius="1" />
+<Blackspot X="-264.9505" Y="-123.0977" Z="46.14084" Radius="1.6" />
+<Blackspot X="-312.8366" Y="203.7294" Z="52.25954" Radius="15.22182" />
+
+</Blackspots>
+
+<QuestOrder>
+
+<CustomBehavior File="LoadRemoteCode" />
+
+
+
+	<While Condition="true" >
+	<While Condition="Me.ZoneId == 5723" >
+	
+	
+	
+	
+	</QuestOrder>
+</HBProfile>

@@ -1,0 +1,9 @@
+	<!--Enter Dungeon-->
+	<If Condition="Me.ZoneId != 5723">
+		<If Condition="Me.Location.Distance(new WoWPoint(3987.989, -2944.655, 1002.547)) &gt; 100 " >
+			<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Azyul]: Heading to Instance.&quot;);" />
+		</If>
+		<MoveTo Nav="Fly" X="3987.989" Y="-2944.655" Z="1002.547"  />
+		<CustomBehavior File="GoThruPortal" Timeout="30000" X="3983.473" Y="-2931.715" Z="1002.547" />
+		<CustomBehavior File="WaitTimer" WaitTime="10000" TerminateWhen="Me.IsInInstance" />
+		</If>

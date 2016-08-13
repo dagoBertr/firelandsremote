@@ -1,0 +1,84 @@
+        <!-- First pull -->
+
+
+
+        <DisableBehavior Name="Combat" />
+        <MoveTo X="-336.799" Y="161.749" Z="47.80421" />
+        <MoveTo X="-301.8751" Y="121.1135" Z="45.02083" />
+        <MoveTo X="-383.7891" Y="71.76392" Z="45.83294" />
+        <MoveTo X="-389.9401" Y="74.78466" Z="45.83452" />
+        <MoveTo X="-404.3139" Y="29.42205" Z="45.78165" />
+        <MoveTo X="-354.6057" Y="29.67383" Z="48.60788" />
+        <If Condition="!Me.HasAura(80263) &amp;&amp; HasItem(58488)" >
+			      <CustomBehavior File="UseItem" ItemId="58488" WaitTime="1000" />
+	      </If>
+        <CustomBehavior File="InteractWith" WaitForNpcs="false" MobState="Alive" MobId="53128" ObjectType="Npc" Range="2" />
+        <EnableBehavior Name="Combat" />
+
+
+      <CustomBehavior File="ForcedMount" MountType="Ground" />
+
+      
+      
+      <MoveTo X="-334.3672" Y="-60.59619" Z="44.75991" />
+      
+	   <!-- Securtiy interact -->
+      <If Condition="Me.Combat">
+        <CustomBehavior File="InteractWith" WaitForNpcs="false" MobState="Alive" MobId="53119" ObjectType="Npc" Range="2" />
+      </If>
+ 
+	<!-- 2nd pul -->
+      <DisableBehavior Name="Combat" />
+      <MoveTo X="-313.4463" Y="-152.3002" Z="44.77283" />
+      <MoveTo X="-283.1603" Y="-128.1539" Z="45.40973" />
+      <MoveTo X="-250.8044" Y="-167.0706" Z="54.43877" />
+      <MoveTo X="-228.0105" Y="-209.8891" Z="53.30191" />
+      <MoveTo X="-224.2337" Y="-247.4816" Z="53.25644" />
+      <MoveTo X="-221.2656" Y="-280.8629" Z="53.30132" />
+      <MoveTo X="-170.4689" Y="-257.2387" Z="55.59405" />
+      <MoveTo X="-142.5069" Y="-201.5208" Z="53.30188" />
+      <MoveTo X="-195.676" Y="-188.1827" Z="53.3019" />
+      <CustomBehavior File="InteractWith" WaitForNpcs="false" MobState="Alive" MobId="53121" ObjectType="Npc" Range="1" />
+      <EnableBehavior Name="Combat" />
+      
+	  <CustomBehavior File="WaitTimer" WaitTime="1000" />
+	  
+      <CustomBehavior File="ForcedMount" MountType="Ground" />
+	  <CustomBehavior File="RunCode" Code="SpellManager.Cast(8395); await Coroutine.Sleep(1525);" />
+	  
+	  <!-- last pull -->
+      <DisableBehavior Name="Combat" />
+	  <MoveTo X="-244.4138" Y="-175.8412" Z="53.99564" />
+		<MoveTo X="-262.5533" Y="-154.8705" Z="52.21867" />
+		<MoveTo X="-281.5392" Y="-102.9065" Z="44.96086" />
+		<MoveTo X="-255.2781" Y="-108.1779" Z="44.79565" />
+      <MoveTo X="-231.0228" Y="-105.297" Z="44.62605" />
+      <MoveTo X="-162.0293" Y="-94.79612" Z="45.38711" />
+      <MoveTo X="-259.397" Y="-39.57774" Z="45.0899" />
+      <MoveTo X="-288.6647" Y="44.2026" Z="45.08817" />
+      <MoveTo X="-235.8468" Y="19.56069" Z="47.49309" />
+      <MoveTo X="-157.9633" Y="27.43606" Z="47.25634" />
+      <MoveTo X="-199.8436" Y="62.61348" Z="45.34483" />
+      <MoveTo X="-162.7051" Y="99.33076" Z="44.41487" />
+      <MoveTo X="-155.4337" Y="122.823" Z="44.72004"  />
+      <MoveTo X="-129.6548" Y="128.3962" Z="44.59863" />
+      <MoveTo X="-72.16676" Y="144.2178" Z="44.10285" />
+      <MoveTo X="-127.8154" Y="158.1351" Z="45.76446" />
+	  <MoveTo X="-128.483" Y="144.5744" Z="44.90186" />
+	  <If Condition="Me.Class == WoWClass.DeathKnight" >
+	  <CustomBehavior File="RunCode" Code="SpellManager.Cast(50842);" />
+	  <CustomBehavior File="WaitTimer" WaitTime="1500" />
+	   <CustomBehavior File="RunCode" Code="SpellManager.Cast(50842);" />
+	   </If>
+	  <If Condition="Me.Class == WoWClass.Druid">
+        <CustomBehavior File="RunCode" Code="SpellManager.Cast(5487);" />
+        <CustomBehavior File="WaitTimer" WaitTime="1000" />
+        <CustomBehavior File="RunCode" Code="SpellManager.Cast(77758);" />
+      </If>
+      <CustomBehavior File="InteractWith" WaitForNpcs="false" MobState="Alive" MobId="53167" ObjectType="Npc" Range="1" />
+      <EnableBehavior Name="Combat" />
+
+      <CustomBehavior File="WaitTimer" WaitTime="3000" />
+	<CustomBehavior File="RunCode" Code="deathCounter=3;" />
+	
+	      <CustomBehavior File="ForcedMount" MountType="Ground" />

@@ -1,0 +1,63 @@
+			<!-- mining -->
+           <If Condition="Me.Class == WoWClass.DeathKnight" >
+			<CustomBehavior File="InteractWith" WaitForNpcs="false" MobState="Dead" MobId="53732" ObjectType="Npc" Range="1" InteractByLooting="true"/> 
+			<CustomBehavior File="WaitTimer" WaitTime="1250" />
+			<CustomBehavior File="InteractWith" WaitForNpcs="false" MobState="Dead" MobId="53732" ObjectType="Npc" Range="1" InteractByLooting="true"/> 
+			<CustomBehavior File="WaitTimer" WaitTime="1250" />
+			<CustomBehavior File="InteractWith" WaitForNpcs="false" MobState="Dead" MobId="53732" ObjectType="Npc" Range="1" InteractByLooting="true"/> 
+			<CustomBehavior File="WaitTimer" WaitTime="1250" />
+			<CustomBehavior File="InteractWith" WaitForNpcs="false" MobState="Dead" MobId="53732" ObjectType="Npc" Range="1" InteractByLooting="true"/> 
+			<CustomBehavior File="WaitTimer" WaitTime="1250" />
+			<CustomBehavior File="InteractWith" WaitForNpcs="false" MobState="Dead" MobId="53732" ObjectType="Npc" Range="1" InteractByLooting="true"/> 
+			<CustomBehavior File="WaitTimer" WaitTime="1250" />
+			<CustomBehavior File="InteractWith" WaitForNpcs="false" MobState="Dead" MobId="53732" ObjectType="Npc" Range="1" InteractByLooting="true"/> 
+			<CustomBehavior File="WaitTimer" WaitTime="1250" />
+			<CustomBehavior File="InteractWith" WaitForNpcs="false" MobState="Dead" MobId="53732" ObjectType="Npc" Range="1" InteractByLooting="true"/> 
+			<CustomBehavior File="WaitTimer" WaitTime="1250" />
+			<CustomBehavior File="InteractWith" WaitForNpcs="false" MobState="Dead" MobId="53732" ObjectType="Npc" Range="1" InteractByLooting="true"/> 
+			<CustomBehavior File="WaitTimer" WaitTime="1250" />
+			<CustomBehavior File="InteractWith" WaitForNpcs="false" MobState="Dead" MobId="53732" ObjectType="Npc" Range="1" InteractByLooting="true"/> 
+			<CustomBehavior File="WaitTimer" WaitTime="1250" />
+			<CustomBehavior File="InteractWith" WaitForNpcs="false" MobState="Dead" MobId="53732" ObjectType="Npc" Range="1" InteractByLooting="true"/> 
+			<CustomBehavior File="WaitTimer" WaitTime="1250" />
+			<CustomBehavior File="InteractWith" WaitForNpcs="false" MobState="Dead" MobId="53732" ObjectType="Npc" Range="1" InteractByLooting="true"/> 
+			<CustomBehavior File="WaitTimer" WaitTime="1250" />
+            <CustomBehavior File="InteractWith" WaitForNpcs="false" MobState="Dead" MobId="53732" ObjectType="Npc" Range="1" InteractByLooting="true"/> 
+			<CustomBehavior File="WaitTimer" WaitTime="1250" />
+            <CustomBehavior File="InteractWith" WaitForNpcs="false" MobState="Dead" MobId="53732" ObjectType="Npc" Range="1" InteractByLooting="true"/> 
+			<CustomBehavior File="WaitTimer" WaitTime="1250" />
+			<CustomBehavior File="InteractWith" WaitForNpcs="false" MobState="Dead" MobId="53732" ObjectType="Npc" Range="1" InteractByLooting="true"/> 
+			<CustomBehavior File="WaitTimer" WaitTime="1250" />
+			<CustomBehavior File="InteractWith" WaitForNpcs="false" MobState="Dead" MobId="53732" ObjectType="Npc" Range="1" InteractByLooting="true"/> 
+			<CustomBehavior File="WaitTimer" WaitTime="1250" />
+			<CustomBehavior File="InteractWith" WaitForNpcs="false" MobState="Dead" MobId="53732" ObjectType="Npc" Range="1" InteractByLooting="true"/> 
+			<CustomBehavior File="WaitTimer" WaitTime="1250" />
+			<CustomBehavior File="InteractWith" WaitForNpcs="false" MobState="Dead" MobId="53732" ObjectType="Npc" Range="1" InteractByLooting="true"/> 
+			<CustomBehavior File="WaitTimer" WaitTime="1250" />
+			<CustomBehavior File="InteractWith" WaitForNpcs="false" MobState="Dead" MobId="53732" ObjectType="Npc" Range="1" InteractByLooting="true"/> 
+			<CustomBehavior File="WaitTimer" WaitTime="1250" />
+			<CustomBehavior File="InteractWith" WaitForNpcs="false" MobState="Dead" MobId="53732" ObjectType="Npc" Range="1" InteractByLooting="true"/> 
+			<CustomBehavior File="WaitTimer" WaitTime="1250" />
+			<CustomBehavior File="InteractWith" WaitForNpcs="false" MobState="Dead" MobId="53732" ObjectType="Npc" Range="1" InteractByLooting="true"/> 
+			<CustomBehavior File="WaitTimer" WaitTime="1250" />
+            <CustomBehavior File="InteractWith" WaitForNpcs="false" MobState="Dead" MobId="53732" ObjectType="Npc" Range="1" InteractByLooting="true"/> 
+			<CustomBehavior File="WaitTimer" WaitTime="1250" />
+            <CustomBehavior File="InteractWith" WaitForNpcs="false" MobState="Dead" MobId="53732" ObjectType="Npc" Range="1" InteractByLooting="true"/> 
+			<CustomBehavior File="WaitTimer" WaitTime="1250" />
+            <CustomBehavior File="InteractWith" WaitForNpcs="false" MobState="Dead" MobId="53732" ObjectType="Npc" Range="1" InteractByLooting="true"/> 
+			<CustomBehavior File="WaitTimer" WaitTime="1250" />
+            <CustomBehavior File="InteractWith" WaitForNpcs="false" MobState="Dead" MobId="53732" ObjectType="Npc" Range="1" InteractByLooting="true"/> 
+			<CustomBehavior File="WaitTimer" WaitTime="1250" />
+            <CustomBehavior File="InteractWith" WaitForNpcs="false" MobState="Dead" MobId="53732" ObjectType="Npc" Range="1" InteractByLooting="true"/> 
+			<CustomBehavior File="WaitTimer" WaitTime="1250" />
+            <CustomBehavior File="InteractWith" WaitForNpcs="false" MobState="Dead" MobId="53732" ObjectType="Npc" Range="1" InteractByLooting="true"/> 
+			<CustomBehavior File="WaitTimer" WaitTime="1250" />
+            <CustomBehavior File="InteractWith" WaitForNpcs="false" MobState="Dead" MobId="53732" ObjectType="Npc" Range="1" InteractByLooting="true"/> 
+			<CustomBehavior File="WaitTimer" WaitTime="1250" />
+            <CustomBehavior File="InteractWith" WaitForNpcs="false" MobState="Dead" MobId="53732" ObjectType="Npc" Range="1" InteractByLooting="true"/> 
+			<CustomBehavior File="WaitTimer" WaitTime="1250" />
+            <CustomBehavior File="InteractWith" WaitForNpcs="false" MobState="Dead" MobId="53732" ObjectType="Npc" Range="1" InteractByLooting="true"/> 
+			<CustomBehavior File="WaitTimer" WaitTime="1250" />
+            <CustomBehavior File="InteractWith" WaitForNpcs="false" MobState="Dead" MobId="53732" ObjectType="Npc" Range="1" InteractByLooting="true"/> 
+			<CustomBehavior File="WaitTimer" WaitTime="1250" />
+      </If>

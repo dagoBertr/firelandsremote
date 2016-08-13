@@ -1,0 +1,31 @@
+      <CustomBehavior File="ForcedMount" MountType="Ground" />
+
+      <If Condition="!(Me.Class == WoWClass.Druid) &amp;&amp; !(Me.Class == WoWClass.DeathKnight)">
+        <!-- Move to Entrance-->
+        <MoveTo X="-167.177" Y="200.9855" Z="45.82888" />
+        <MoveTo X="-259.4884" Y="196.8092" Z="45.23314" />
+        <MoveTo X="-341.0423" Y="166.228" Z="49.53873" />
+			  <MoveTo X="-528.8029" Y="312.1284" Z="115.2895" />
+		    <CustomBehavior File="RunCode" Code="waitCounter++;" />
+			  <!-- exit and reset-->
+			
+			
+			  <!-- stealth on leave -->
+            <If Condition="Me.Class == WoWClass.Druid &amp;&amp; !Me.Combat" >
+              <CustomBehavior File="RunCode" Code="SpellManager.Cast(5215);" />
+            </If>
+            <If Condition="Me.Class == WoWClass.Rogue &amp;&amp; !Me.Combat" >
+              <CustomBehavior File="RunCode" Code="SpellManager.Cast(1784);" />
+            </If>
+            <If Condition="Me.Class == WoWClass.Hunter &amp;&amp; !Me.Combat" >
+              <CustomBehavior File="RunCode" Code="SpellManager.Cast(51753);" />
+            </If>
+
+			  <!-- ReEnter-->
+        <MoveTo X="-529.8305" Y="311.5113" Z="115.4845" />
+		  	<CustomBehavior File="WaitTimer" WaitTime="5000" />
+			  <CustomBehavior File="GoThruPortal" Timeout="30000" X="-558.6042" Y="322.9795" Z="115.4839" />
+        <EnableBehavior Name="Death" /> 
+			  <CustomBehavior File="WaitTimer" WaitTime="10000" TerminateWhen="!Me.IsInInstance" />
+			  <CustomBehavior File="Misc\RunLua" Lua="ResetInstances();"  />
+      </If>

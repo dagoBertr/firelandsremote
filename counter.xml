@@ -1,0 +1,4 @@
+	<CustomBehavior File="RunCode" Type="Definition" Code="int waitCounter = 0;" />
+	<CustomBehavior File="RunCode" Type="Definition" Code="int deathCounter = 0;" />
+    <CustomBehavior File="RunCode" Type="Definition" Code="int hearthCounter = 0;" />
+	<CustomBehavior File="RunCode" Type="Definition" Code="int moongladeCounter = 0;" />

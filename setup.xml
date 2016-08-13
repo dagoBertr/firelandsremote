@@ -1,0 +1,8 @@
+      <DisableBehavior Name="Death" /> 
+		<If Condition="waitCounter &gt;= 1">
+		<CustomBehavior File="Misc\InstanceTimer" Timer="Check" WaitTime="400000" />
+    </If>
+    <CustomBehavior File="RunCode" Code="waitCounter=0;" />
+	 <CustomBehavior File="RunCode" Code="deathCounter=0;" />
+		<CustomBehavior File="Misc\InstanceTimer" Timer="Start" />
+		

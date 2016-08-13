@@ -1,0 +1,14 @@
+      <If Condition="Me.Class == WoWClass.Druid">
+        <CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;Use Teleport: Moonglade&quot;);" />
+        <CustomBehavior File="RunCode" Code="SpellManager.Cast(18960); await Coroutine.Sleep(20000);" />
+        <CustomBehavior File="WaitTimer" WaitTime="1000" />
+        <CustomBehavior File="Misc\RunLua" Lua="ResetInstances();"  />
+		<While Condition="Me.ZoneId == 493">
+			<CustomBehavior File="RunCode" Code="SpellManager.Cast(18960); await Coroutine.Sleep(20000);" />
+				<If Condition="Me.ZoneId == 493">
+					<CustomBehavior File="RunCode" Code="moongladeCounter++;" />
+					<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.Orange, &quot;Teleport unsuccessful add +1 to counter&quot;);" />
+				</If>
+		</While>
+        <CustomBehavior File="RunCode" Code="waitCounter++;" />
+      </If>

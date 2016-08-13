@@ -1,0 +1,355 @@
+	<!--put gold in bank-->
+		
+		<If Condition="SpellManager.CanCast(83958) &amp;&amp; ((Me.Gold &gt; 1000) || (HasItem(68729) || HasItem(53010) || HasItem(52183) || HasItem(52185) || HasItem(52328) || HasItem(52327) || HasItem(52325) || HasItem(52326) || HasItem(52329) || HasItem(52555) || HasItem(52718)  || (Me.Class == WoWClass.Rogue &amp;&amp; !HasItem(58488))))" >
+			<CustomBehavior File="RunCode" Code="SpellManager.Cast(83958);" />
+			<CustomBehavior File="WaitTimer" WaitTime="3500" />
+			<CustomBehavior File="InteractWith" MobId1="206602" MobId2="206603" WaitForNpcs="false" WaitTime="2000" /> 
+			
+				<CustomBehavior File="Misc\RunLua" Lua="DepositGuildBankMoney(GetMoney());" />  
+			
+			
+			
+			
+			<!-- elementium lockbox -->
+			<If Condition="HasItem(68729)">
+				<CustomBehavior File="Misc\RunLua" Lua="GuildBankTab1Button:Click()" WaitTime="100" />  
+				<CustomBehavior File="RunCode" WaitTime="1000" NumOfTimes="1" Code="foreach (WoWItem i in Me.BagItems) { if(i.Entry == 68729) i.UseContainerItem(); StyxWoW.SleepForLagDuration(); }" />
+			</If>
+			<If Condition="HasItem(68729)">
+				<CustomBehavior File="Misc\RunLua" Lua="GuildBankTab2Button:Click()" WaitTime="100" />  
+				<CustomBehavior File="RunCode" WaitTime="1000" NumOfTimes="1" Code="foreach (WoWItem i in Me.BagItems) { if(i.Entry == 68729) i.UseContainerItem(); StyxWoW.SleepForLagDuration(); }" />
+			</If>
+			<If Condition="HasItem(68729)">
+				<CustomBehavior File="Misc\RunLua" Lua="GuildBankTab3Button:Click()" WaitTime="100" />  
+				<CustomBehavior File="RunCode" WaitTime="1000" NumOfTimes="1" Code="foreach (WoWItem i in Me.BagItems) { if(i.Entry == 68729) i.UseContainerItem(); StyxWoW.SleepForLagDuration(); }" />
+			</If>
+			<If Condition="HasItem(68729)">
+				<CustomBehavior File="Misc\RunLua" Lua="GuildBankTab4Button:Click()" WaitTime="100" />  
+				<CustomBehavior File="RunCode" WaitTime="1000" NumOfTimes="1" Code="foreach (WoWItem i in Me.BagItems) { if(i.Entry == 68729) i.UseContainerItem(); StyxWoW.SleepForLagDuration(); }" />
+			</If>
+			<If Condition="HasItem(68729)">
+				<CustomBehavior File="Misc\RunLua" Lua="GuildBankTab5Button:Click()" WaitTime="100" />  
+				<CustomBehavior File="RunCode" WaitTime="1000" NumOfTimes="1" Code="foreach (WoWItem i in Me.BagItems) { if(i.Entry == 68729) i.UseContainerItem(); StyxWoW.SleepForLagDuration(); }" />
+			</If>
+			<If Condition="HasItem(68729)">
+				<CustomBehavior File="Misc\RunLua" Lua="GuildBankTab6Button:Click()" WaitTime="100" />  
+				<CustomBehavior File="RunCode" WaitTime="1000" NumOfTimes="1" Code="foreach (WoWItem i in Me.BagItems) { if(i.Entry == 68729) i.UseContainerItem(); StyxWoW.SleepForLagDuration(); }" />
+			</If>
+			
+			
+			<!-- Embersilk Cloth -->
+			<If Condition="HasItem(53010)">
+				<CustomBehavior File="Misc\RunLua" Lua="GuildBankTab1Button:Click()" WaitTime="100" />  
+				<CustomBehavior File="RunCode" WaitTime="1000" NumOfTimes="1" Code="foreach (WoWItem i in Me.BagItems) { if(i.Entry == 53010) i.UseContainerItem(); StyxWoW.SleepForLagDuration(); }" />
+			</If>
+			<If Condition="HasItem(53010)">
+				<CustomBehavior File="Misc\RunLua" Lua="GuildBankTab2Button:Click()" WaitTime="100" />  
+				<CustomBehavior File="RunCode" WaitTime="1000" NumOfTimes="1" Code="foreach (WoWItem i in Me.BagItems) { if(i.Entry == 53010) i.UseContainerItem(); StyxWoW.SleepForLagDuration(); }" />
+			</If>
+			<If Condition="HasItem(53010)">
+				<CustomBehavior File="Misc\RunLua" Lua="GuildBankTab3Button:Click()" WaitTime="100" />  
+				<CustomBehavior File="RunCode" WaitTime="1000" NumOfTimes="1" Code="foreach (WoWItem i in Me.BagItems) { if(i.Entry == 53010) i.UseContainerItem(); StyxWoW.SleepForLagDuration(); }" />
+			</If>
+			<If Condition="HasItem(53010)">
+				<CustomBehavior File="Misc\RunLua" Lua="GuildBankTab4Button:Click()" WaitTime="100" />  
+				<CustomBehavior File="RunCode" WaitTime="1000" NumOfTimes="1" Code="foreach (WoWItem i in Me.BagItems) { if(i.Entry == 53010) i.UseContainerItem(); StyxWoW.SleepForLagDuration(); }" />
+			</If>
+			<If Condition="HasItem(53010)">
+				<CustomBehavior File="Misc\RunLua" Lua="GuildBankTab5Button:Click()" WaitTime="100" />  
+				<CustomBehavior File="RunCode" WaitTime="1000" NumOfTimes="1" Code="foreach (WoWItem i in Me.BagItems) { if(i.Entry == 53010) i.UseContainerItem(); StyxWoW.SleepForLagDuration(); }" />
+			</If>
+			<If Condition="HasItem(53010)">
+				<CustomBehavior File="Misc\RunLua" Lua="GuildBankTab6Button:Click()" WaitTime="100" />  
+				<CustomBehavior File="RunCode" WaitTime="1000" NumOfTimes="1" Code="foreach (WoWItem i in Me.BagItems) { if(i.Entry == 53010) i.UseContainerItem(); StyxWoW.SleepForLagDuration(); }" />
+			</If>
+			
+			<!-- Pyrit Ore -->
+			<If Condition="HasItem(52183)">
+				<CustomBehavior File="Misc\RunLua" Lua="GuildBankTab1Button:Click()" WaitTime="100" />  
+				<CustomBehavior File="RunCode" WaitTime="1000" NumOfTimes="1" Code="foreach (WoWItem i in Me.BagItems) { if(i.Entry == 52183) i.UseContainerItem(); StyxWoW.SleepForLagDuration(); }" />
+			</If>
+			<If Condition="HasItem(52183)">
+				<CustomBehavior File="Misc\RunLua" Lua="GuildBankTab2Button:Click()" WaitTime="100" />  
+				<CustomBehavior File="RunCode" WaitTime="1000" NumOfTimes="1" Code="foreach (WoWItem i in Me.BagItems) { if(i.Entry == 52183) i.UseContainerItem(); StyxWoW.SleepForLagDuration(); }" />
+			</If>
+			<If Condition="HasItem(52183)">
+				<CustomBehavior File="Misc\RunLua" Lua="GuildBankTab3Button:Click()" WaitTime="100" />  
+				<CustomBehavior File="RunCode" WaitTime="1000" NumOfTimes="1" Code="foreach (WoWItem i in Me.BagItems) { if(i.Entry == 52183) i.UseContainerItem(); StyxWoW.SleepForLagDuration(); }" />
+			</If>
+			<If Condition="HasItem(52183)">
+				<CustomBehavior File="Misc\RunLua" Lua="GuildBankTab4Button:Click()" WaitTime="100" />  
+				<CustomBehavior File="RunCode" WaitTime="1000" NumOfTimes="1" Code="foreach (WoWItem i in Me.BagItems) { if(i.Entry == 52183) i.UseContainerItem(); StyxWoW.SleepForLagDuration(); }" />
+			</If>
+			<If Condition="HasItem(52183)">
+				<CustomBehavior File="Misc\RunLua" Lua="GuildBankTab5Button:Click()" WaitTime="100" />  
+				<CustomBehavior File="RunCode" WaitTime="1000" NumOfTimes="1" Code="foreach (WoWItem i in Me.BagItems) { if(i.Entry == 52183) i.UseContainerItem(); StyxWoW.SleepForLagDuration(); }" />
+			</If>
+			<If Condition="HasItem(52183)">
+				<CustomBehavior File="Misc\RunLua" Lua="GuildBankTab6Button:Click()" WaitTime="100" />  
+				<CustomBehavior File="RunCode" WaitTime="1000" NumOfTimes="1" Code="foreach (WoWItem i in Me.BagItems) { if(i.Entry == 52183) i.UseContainerItem(); StyxWoW.SleepForLagDuration(); }" />
+			</If>
+			
+			<!-- ele  Ore -->
+			<If Condition="HasItem(52185)">
+				<CustomBehavior File="Misc\RunLua" Lua="GuildBankTab1Button:Click()" WaitTime="100" />  
+				<CustomBehavior File="RunCode" WaitTime="1000" NumOfTimes="1" Code="foreach (WoWItem i in Me.BagItems) { if(i.Entry == 52185) i.UseContainerItem(); StyxWoW.SleepForLagDuration(); }" />
+			</If>
+			<If Condition="HasItem(52185)">
+				<CustomBehavior File="Misc\RunLua" Lua="GuildBankTab2Button:Click()" WaitTime="100" />  
+				<CustomBehavior File="RunCode" WaitTime="1000" NumOfTimes="1" Code="foreach (WoWItem i in Me.BagItems) { if(i.Entry == 52185) i.UseContainerItem(); StyxWoW.SleepForLagDuration(); }" />
+			</If>
+			<If Condition="HasItem(52185)">
+				<CustomBehavior File="Misc\RunLua" Lua="GuildBankTab3Button:Click()" WaitTime="100" />  
+				<CustomBehavior File="RunCode" WaitTime="1000" NumOfTimes="1" Code="foreach (WoWItem i in Me.BagItems) { if(i.Entry == 52185) i.UseContainerItem(); StyxWoW.SleepForLagDuration(); }" />
+			</If>
+			<If Condition="HasItem(52185)">
+				<CustomBehavior File="Misc\RunLua" Lua="GuildBankTab4Button:Click()" WaitTime="100" />  
+				<CustomBehavior File="RunCode" WaitTime="1000" NumOfTimes="1" Code="foreach (WoWItem i in Me.BagItems) { if(i.Entry == 52185) i.UseContainerItem(); StyxWoW.SleepForLagDuration(); }" />
+			</If>
+			<If Condition="HasItem(52185)">
+				<CustomBehavior File="Misc\RunLua" Lua="GuildBankTab5Button:Click()" WaitTime="100" />  
+				<CustomBehavior File="RunCode" WaitTime="1000" NumOfTimes="1" Code="foreach (WoWItem i in Me.BagItems) { if(i.Entry == 52185) i.UseContainerItem(); StyxWoW.SleepForLagDuration(); }" />
+			</If>
+			<If Condition="HasItem(52185)">
+				<CustomBehavior File="Misc\RunLua" Lua="GuildBankTab6Button:Click()" WaitTime="100" />  
+				<CustomBehavior File="RunCode" WaitTime="1000" NumOfTimes="1" Code="foreach (WoWItem i in Me.BagItems) { if(i.Entry == 52185) i.UseContainerItem(); StyxWoW.SleepForLagDuration(); }" />
+			</If>
+
+			<!-- volatile air -->
+			<If Condition="HasItem(52328)">
+				<CustomBehavior File="Misc\RunLua" Lua="GuildBankTab1Button:Click()" WaitTime="100" />  
+				<CustomBehavior File="RunCode" WaitTime="1000" NumOfTimes="1" Code="foreach (WoWItem i in Me.BagItems) { if(i.Entry == 52328) i.UseContainerItem(); StyxWoW.SleepForLagDuration(); }" />
+			</If>
+			<If Condition="HasItem(52328)">
+				<CustomBehavior File="Misc\RunLua" Lua="GuildBankTab2Button:Click()" WaitTime="100" />  
+				<CustomBehavior File="RunCode" WaitTime="1000" NumOfTimes="1" Code="foreach (WoWItem i in Me.BagItems) { if(i.Entry == 52328) i.UseContainerItem(); StyxWoW.SleepForLagDuration(); }" />
+			</If>
+			<If Condition="HasItem(52328)">
+				<CustomBehavior File="Misc\RunLua" Lua="GuildBankTab3Button:Click()" WaitTime="100" />  
+				<CustomBehavior File="RunCode" WaitTime="1000" NumOfTimes="1" Code="foreach (WoWItem i in Me.BagItems) { if(i.Entry == 52328) i.UseContainerItem(); StyxWoW.SleepForLagDuration(); }" />
+			</If>
+			<If Condition="HasItem(52328)">
+				<CustomBehavior File="Misc\RunLua" Lua="GuildBankTab4Button:Click()" WaitTime="100" />  
+				<CustomBehavior File="RunCode" WaitTime="1000" NumOfTimes="1" Code="foreach (WoWItem i in Me.BagItems) { if(i.Entry == 52328) i.UseContainerItem(); StyxWoW.SleepForLagDuration(); }" />
+			</If>
+			<If Condition="HasItem(52328)">
+				<CustomBehavior File="Misc\RunLua" Lua="GuildBankTab5Button:Click()" WaitTime="100" />  
+				<CustomBehavior File="RunCode" WaitTime="1000" NumOfTimes="1" Code="foreach (WoWItem i in Me.BagItems) { if(i.Entry == 52328) i.UseContainerItem(); StyxWoW.SleepForLagDuration(); }" />
+			</If>
+			<If Condition="HasItem(52328)">
+				<CustomBehavior File="Misc\RunLua" Lua="GuildBankTab6Button:Click()" WaitTime="100" />  
+				<CustomBehavior File="RunCode" WaitTime="1000" NumOfTimes="1" Code="foreach (WoWItem i in Me.BagItems) { if(i.Entry == 52328) i.UseContainerItem(); StyxWoW.SleepForLagDuration(); }" />
+			</If>
+			
+			<!-- volatile air -->
+			<If Condition="HasItem(52327)">
+				<CustomBehavior File="Misc\RunLua" Lua="GuildBankTab1Button:Click()" WaitTime="100" />  
+				<CustomBehavior File="RunCode" WaitTime="1000" NumOfTimes="1" Code="foreach (WoWItem i in Me.BagItems) { if(i.Entry == 52327) i.UseContainerItem(); StyxWoW.SleepForLagDuration(); }" />
+			</If>
+			<If Condition="HasItem(52327)">
+				<CustomBehavior File="Misc\RunLua" Lua="GuildBankTab2Button:Click()" WaitTime="100" />  
+				<CustomBehavior File="RunCode" WaitTime="1000" NumOfTimes="1" Code="foreach (WoWItem i in Me.BagItems) { if(i.Entry == 52327) i.UseContainerItem(); StyxWoW.SleepForLagDuration(); }" />
+			</If>
+			<If Condition="HasItem(52327)">
+				<CustomBehavior File="Misc\RunLua" Lua="GuildBankTab3Button:Click()" WaitTime="100" />  
+				<CustomBehavior File="RunCode" WaitTime="1000" NumOfTimes="1" Code="foreach (WoWItem i in Me.BagItems) { if(i.Entry == 52327) i.UseContainerItem(); StyxWoW.SleepForLagDuration(); }" />
+			</If>
+			<If Condition="HasItem(52327)">
+				<CustomBehavior File="Misc\RunLua" Lua="GuildBankTab4Button:Click()" WaitTime="100" />  
+				<CustomBehavior File="RunCode" WaitTime="1000" NumOfTimes="1" Code="foreach (WoWItem i in Me.BagItems) { if(i.Entry == 52327) i.UseContainerItem(); StyxWoW.SleepForLagDuration(); }" />
+			</If>
+			<If Condition="HasItem(52327)">
+				<CustomBehavior File="Misc\RunLua" Lua="GuildBankTab5Button:Click()" WaitTime="100" />  
+				<CustomBehavior File="RunCode" WaitTime="1000" NumOfTimes="1" Code="foreach (WoWItem i in Me.BagItems) { if(i.Entry == 52327) i.UseContainerItem(); StyxWoW.SleepForLagDuration(); }" />
+			</If>
+			<If Condition="HasItem(52327)">
+				<CustomBehavior File="Misc\RunLua" Lua="GuildBankTab6Button:Click()" WaitTime="100" />  
+				<CustomBehavior File="RunCode" WaitTime="1000" NumOfTimes="1" Code="foreach (WoWItem i in Me.BagItems) { if(i.Entry == 52327) i.UseContainerItem(); StyxWoW.SleepForLagDuration(); }" />
+			</If>
+			
+			<!-- volatile fire -->
+			<If Condition="HasItem(52325)">
+				<CustomBehavior File="Misc\RunLua" Lua="GuildBankTab1Button:Click()" WaitTime="100" />  
+				<CustomBehavior File="RunCode" WaitTime="1000" NumOfTimes="1" Code="foreach (WoWItem i in Me.BagItems) { if(i.Entry == 52325) i.UseContainerItem(); StyxWoW.SleepForLagDuration(); }" />
+			</If>
+			<If Condition="HasItem(52325)">
+				<CustomBehavior File="Misc\RunLua" Lua="GuildBankTab2Button:Click()" WaitTime="100" />  
+				<CustomBehavior File="RunCode" WaitTime="1000" NumOfTimes="1" Code="foreach (WoWItem i in Me.BagItems) { if(i.Entry == 52325) i.UseContainerItem(); StyxWoW.SleepForLagDuration(); }" />
+			</If>
+			<If Condition="HasItem(52325)">
+				<CustomBehavior File="Misc\RunLua" Lua="GuildBankTab3Button:Click()" WaitTime="100" />  
+				<CustomBehavior File="RunCode" WaitTime="1000" NumOfTimes="1" Code="foreach (WoWItem i in Me.BagItems) { if(i.Entry == 52325) i.UseContainerItem(); StyxWoW.SleepForLagDuration(); }" />
+			</If>
+			<If Condition="HasItem(52325)">
+				<CustomBehavior File="Misc\RunLua" Lua="GuildBankTab4Button:Click()" WaitTime="100" />  
+				<CustomBehavior File="RunCode" WaitTime="1000" NumOfTimes="1" Code="foreach (WoWItem i in Me.BagItems) { if(i.Entry == 52325) i.UseContainerItem(); StyxWoW.SleepForLagDuration(); }" />
+			</If>
+			<If Condition="HasItem(52325)">
+				<CustomBehavior File="Misc\RunLua" Lua="GuildBankTab5Button:Click()" WaitTime="100" />  
+				<CustomBehavior File="RunCode" WaitTime="1000" NumOfTimes="1" Code="foreach (WoWItem i in Me.BagItems) { if(i.Entry == 52325) i.UseContainerItem(); StyxWoW.SleepForLagDuration(); }" />
+			</If>
+			<If Condition="HasItem(52325)">
+				<CustomBehavior File="Misc\RunLua" Lua="GuildBankTab6Button:Click()" WaitTime="100" />  
+				<CustomBehavior File="RunCode" WaitTime="1000" NumOfTimes="1" Code="foreach (WoWItem i in Me.BagItems) { if(i.Entry == 52325) i.UseContainerItem(); StyxWoW.SleepForLagDuration(); }" />
+			</If>
+			
+			<!--  volatile water -->
+			<If Condition="HasItem(52326)">
+				<CustomBehavior File="Misc\RunLua" Lua="GuildBankTab1Button:Click()" WaitTime="100" />  
+				<CustomBehavior File="RunCode" WaitTime="1000" NumOfTimes="1" Code="foreach (WoWItem i in Me.BagItems) { if(i.Entry == 52326) i.UseContainerItem(); StyxWoW.SleepForLagDuration(); }" />
+			</If>
+			<If Condition="HasItem(52326)">
+				<CustomBehavior File="Misc\RunLua" Lua="GuildBankTab2Button:Click()" WaitTime="100" />  
+				<CustomBehavior File="RunCode" WaitTime="1000" NumOfTimes="1" Code="foreach (WoWItem i in Me.BagItems) { if(i.Entry == 52326) i.UseContainerItem(); StyxWoW.SleepForLagDuration(); }" />
+			</If>
+			<If Condition="HasItem(52326)">
+				<CustomBehavior File="Misc\RunLua" Lua="GuildBankTab3Button:Click()" WaitTime="100" />  
+				<CustomBehavior File="RunCode" WaitTime="1000" NumOfTimes="1" Code="foreach (WoWItem i in Me.BagItems) { if(i.Entry == 52326) i.UseContainerItem(); StyxWoW.SleepForLagDuration(); }" />
+			</If>
+			<If Condition="HasItem(52326)">
+				<CustomBehavior File="Misc\RunLua" Lua="GuildBankTab4Button:Click()" WaitTime="100" />  
+				<CustomBehavior File="RunCode" WaitTime="1000" NumOfTimes="1" Code="foreach (WoWItem i in Me.BagItems) { if(i.Entry == 52326) i.UseContainerItem(); StyxWoW.SleepForLagDuration(); }" />
+			</If>
+			<If Condition="HasItem(52326)">
+				<CustomBehavior File="Misc\RunLua" Lua="GuildBankTab5Button:Click()" WaitTime="100" />  
+				<CustomBehavior File="RunCode" WaitTime="1000" NumOfTimes="1" Code="foreach (WoWItem i in Me.BagItems) { if(i.Entry == 52326) i.UseContainerItem(); StyxWoW.SleepForLagDuration(); }" />
+			</If>
+			<If Condition="HasItem(52326)">
+				<CustomBehavior File="Misc\RunLua" Lua="GuildBankTab6Button:Click()" WaitTime="100" />  
+				<CustomBehavior File="RunCode" WaitTime="1000" NumOfTimes="1" Code="foreach (WoWItem i in Me.BagItems) { if(i.Entry == 52326) i.UseContainerItem(); StyxWoW.SleepForLagDuration(); }" />
+			</If>
+			
+			<!-- volatile life -->
+			<If Condition="HasItem(52329)">
+				<CustomBehavior File="Misc\RunLua" Lua="GuildBankTab1Button:Click()" WaitTime="100" />  
+				<CustomBehavior File="RunCode" WaitTime="1000" NumOfTimes="1" Code="foreach (WoWItem i in Me.BagItems) { if(i.Entry == 52329) i.UseContainerItem(); StyxWoW.SleepForLagDuration(); }" />
+			</If>
+			<If Condition="HasItem(52329)">
+				<CustomBehavior File="Misc\RunLua" Lua="GuildBankTab2Button:Click()" WaitTime="100" />  
+				<CustomBehavior File="RunCode" WaitTime="1000" NumOfTimes="1" Code="foreach (WoWItem i in Me.BagItems) { if(i.Entry == 52329) i.UseContainerItem(); StyxWoW.SleepForLagDuration(); }" />
+			</If>
+			<If Condition="HasItem(52329)">
+				<CustomBehavior File="Misc\RunLua" Lua="GuildBankTab3Button:Click()" WaitTime="100" />  
+				<CustomBehavior File="RunCode" WaitTime="1000" NumOfTimes="1" Code="foreach (WoWItem i in Me.BagItems) { if(i.Entry == 52329) i.UseContainerItem(); StyxWoW.SleepForLagDuration(); }" />
+			</If>
+			<If Condition="HasItem(52329)">
+				<CustomBehavior File="Misc\RunLua" Lua="GuildBankTab4Button:Click()" WaitTime="100" />  
+				<CustomBehavior File="RunCode" WaitTime="1000" NumOfTimes="1" Code="foreach (WoWItem i in Me.BagItems) { if(i.Entry == 52329) i.UseContainerItem(); StyxWoW.SleepForLagDuration(); }" />
+			</If>
+			<If Condition="HasItem(52329)">
+				<CustomBehavior File="Misc\RunLua" Lua="GuildBankTab5Button:Click()" WaitTime="100" />  
+				<CustomBehavior File="RunCode" WaitTime="1000" NumOfTimes="1" Code="foreach (WoWItem i in Me.BagItems) { if(i.Entry == 52329) i.UseContainerItem(); StyxWoW.SleepForLagDuration(); }" />
+			</If>
+			<If Condition="HasItem(52329)">
+				<CustomBehavior File="Misc\RunLua" Lua="GuildBankTab6Button:Click()" WaitTime="100" />  
+				<CustomBehavior File="RunCode" WaitTime="1000" NumOfTimes="1" Code="foreach (WoWItem i in Me.BagItems) { if(i.Entry == 52329) i.UseContainerItem(); StyxWoW.SleepForLagDuration(); }" />
+			</If>
+			
+			<!-- Dust  -->
+			<If Condition="HasItem(52555)">
+				<CustomBehavior File="Misc\RunLua" Lua="GuildBankTab1Button:Click()" WaitTime="100" />  
+				<CustomBehavior File="RunCode" WaitTime="1000" NumOfTimes="1" Code="foreach (WoWItem i in Me.BagItems) { if(i.Entry == 52555) i.UseContainerItem(); StyxWoW.SleepForLagDuration(); }" />
+			</If>
+			<If Condition="HasItem(52555)">
+				<CustomBehavior File="Misc\RunLua" Lua="GuildBankTab2Button:Click()" WaitTime="100" />  
+				<CustomBehavior File="RunCode" WaitTime="1000" NumOfTimes="1" Code="foreach (WoWItem i in Me.BagItems) { if(i.Entry == 52555) i.UseContainerItem(); StyxWoW.SleepForLagDuration(); }" />
+			</If>
+			<If Condition="HasItem(52555)">
+				<CustomBehavior File="Misc\RunLua" Lua="GuildBankTab3Button:Click()" WaitTime="100" />  
+				<CustomBehavior File="RunCode" WaitTime="1000" NumOfTimes="1" Code="foreach (WoWItem i in Me.BagItems) { if(i.Entry == 52555) i.UseContainerItem(); StyxWoW.SleepForLagDuration(); }" />
+			</If>
+			<If Condition="HasItem(52555)">
+				<CustomBehavior File="Misc\RunLua" Lua="GuildBankTab4Button:Click()" WaitTime="100" />  
+				<CustomBehavior File="RunCode" WaitTime="1000" NumOfTimes="1" Code="foreach (WoWItem i in Me.BagItems) { if(i.Entry == 52555) i.UseContainerItem(); StyxWoW.SleepForLagDuration(); }" />
+			</If>
+			<If Condition="HasItem(52555)">
+				<CustomBehavior File="Misc\RunLua" Lua="GuildBankTab5Button:Click()" WaitTime="100" />  
+				<CustomBehavior File="RunCode" WaitTime="1000" NumOfTimes="1" Code="foreach (WoWItem i in Me.BagItems) { if(i.Entry == 52555) i.UseContainerItem(); StyxWoW.SleepForLagDuration(); }" />
+			</If>
+			<If Condition="HasItem(52555)">
+				<CustomBehavior File="Misc\RunLua" Lua="GuildBankTab6Button:Click()" WaitTime="100" />  
+				<CustomBehavior File="RunCode" WaitTime="1000" NumOfTimes="1" Code="foreach (WoWItem i in Me.BagItems) { if(i.Entry == 52555) i.UseContainerItem(); StyxWoW.SleepForLagDuration(); }" />
+			</If>
+			
+			
+			<!-- essence -->
+			<If Condition="HasItem(52718)">
+				<CustomBehavior File="Misc\RunLua" Lua="GuildBankTab1Button:Click()" WaitTime="100" />  
+				<CustomBehavior File="RunCode" WaitTime="1000" NumOfTimes="1" Code="foreach (WoWItem i in Me.BagItems) { if(i.Entry == 52718) i.UseContainerItem(); StyxWoW.SleepForLagDuration(); }" />
+			</If>
+			<If Condition="HasItem(52718)">
+				<CustomBehavior File="Misc\RunLua" Lua="GuildBankTab2Button:Click()" WaitTime="100" />  
+				<CustomBehavior File="RunCode" WaitTime="1000" NumOfTimes="1" Code="foreach (WoWItem i in Me.BagItems) { if(i.Entry == 52718) i.UseContainerItem(); StyxWoW.SleepForLagDuration(); }" />
+			</If>
+			<If Condition="HasItem(52718)">
+				<CustomBehavior File="Misc\RunLua" Lua="GuildBankTab3Button:Click()" WaitTime="100" />  
+				<CustomBehavior File="RunCode" WaitTime="1000" NumOfTimes="1" Code="foreach (WoWItem i in Me.BagItems) { if(i.Entry == 52718) i.UseContainerItem(); StyxWoW.SleepForLagDuration(); }" />
+			</If>
+			<If Condition="HasItem(52718)">
+				<CustomBehavior File="Misc\RunLua" Lua="GuildBankTab4Button:Click()" WaitTime="100" />  
+				<CustomBehavior File="RunCode" WaitTime="1000" NumOfTimes="1" Code="foreach (WoWItem i in Me.BagItems) { if(i.Entry == 52718) i.UseContainerItem(); StyxWoW.SleepForLagDuration(); }" />
+			</If>
+			<If Condition="HasItem(52718)">
+				<CustomBehavior File="Misc\RunLua" Lua="GuildBankTab5Button:Click()" WaitTime="100" />  
+				<CustomBehavior File="RunCode" WaitTime="1000" NumOfTimes="1" Code="foreach (WoWItem i in Me.BagItems) { if(i.Entry == 52718) i.UseContainerItem(); StyxWoW.SleepForLagDuration(); }" />
+			</If>
+			<If Condition="HasItem(52718)">
+				<CustomBehavior File="Misc\RunLua" Lua="GuildBankTab6Button:Click()" WaitTime="100" />  
+				<CustomBehavior File="RunCode" WaitTime="1000" NumOfTimes="1" Code="foreach (WoWItem i in Me.BagItems) { if(i.Entry == 52718) i.UseContainerItem(); StyxWoW.SleepForLagDuration(); }" />
+			</If>
+
+
+
+			
+			
+			<If Condition="Me.Class == WoWClass.Rogue &amp;&amp; Me.FreeBagSlots &gt;= 40" >
+				<CustomBehavior File="Misc\RunLua" Lua="GuildBankTab1Button:Click()" WaitTime="500" />  
+				<CustomBehavior File="Misc\RunLua"  WaitTime="1000" NumOfTimes="3" Lua="local b=1 for s=1,98 do local n=GetGuildBankItemLink(b,s)if n and strfind(n,&quot;68729&quot;)then print(&quot;Withdrawing &quot;..n)AutoStoreGuildBankItem(b,s)end end" />	 
+				<CustomBehavior File="Misc\RunLua" Lua="GuildBankTab2Button:Click()" WaitTime="500" />  
+				<CustomBehavior File="Misc\RunLua"  WaitTime="1000" NumOfTimes="3" Lua="local b=2 for s=1,98 do local n=GetGuildBankItemLink(b,s)if n and strfind(n,&quot;68729&quot;)then print(&quot;Withdrawing &quot;..n)AutoStoreGuildBankItem(b,s)end end" />	   
+				<CustomBehavior File="Misc\RunLua" Lua="GuildBankTab3Button:Click()" WaitTime="500" />   
+				<CustomBehavior File="Misc\RunLua"  WaitTime="1000" NumOfTimes="3" Lua="local b=3 for s=1,98 do local n=GetGuildBankItemLink(b,s)if n and strfind(n,&quot;68729&quot;)then print(&quot;Withdrawing &quot;..n)AutoStoreGuildBankItem(b,s)end end" />	
+				<CustomBehavior File="Misc\RunLua" Lua="GuildBankTab4Button:Click()" WaitTime="500" />        
+				<CustomBehavior File="Misc\RunLua"  WaitTime="1000" NumOfTimes="3" Lua="local b=4 for s=1,98 do local n=GetGuildBankItemLink(b,s)if n and strfind(n,&quot;68729&quot;)then print(&quot;Withdrawing &quot;..n)AutoStoreGuildBankItem(b,s)end end" />	     
+				<CustomBehavior File="Misc\RunLua" Lua="GuildBankTab5Button:Click()" WaitTime="500" />   
+				<CustomBehavior File="Misc\RunLua"  WaitTime="1000" NumOfTimes="3" Lua="local b=5 for s=1,98 do local n=GetGuildBankItemLink(b,s)if n and strfind(n,&quot;68729&quot;)then print(&quot;Withdrawing &quot;..n)AutoStoreGuildBankItem(b,s)end end" />	
+				<CustomBehavior File="Misc\RunLua" Lua="GuildBankTab6Button:Click()" WaitTime="500" />      
+				<CustomBehavior File="Misc\RunLua"  WaitTime="1000" NumOfTimes="3" Lua="local b=6 for s=1,98 do local n=GetGuildBankItemLink(b,s)if n and strfind(n,&quot;68729&quot;)then print(&quot;Withdrawing &quot;..n)AutoStoreGuildBankItem(b,s)end end" />	
+			</If>
+			
+			
+			<If Condition="Me.FreeBagSlots &gt;= 1 &amp;&amp; !HasItem(58488)" >
+				<CustomBehavior File="Misc\RunLua" Lua="GuildBankTab1Button:Click()" WaitTime="500" />  
+				<CustomBehavior File="Misc\RunLua"  WaitTime="1000" NumOfTimes="3" Lua="local b=1 for s=1,98 do local n=GetGuildBankItemLink(b,s)if n and strfind(n,&quot;58488&quot;)then print(&quot;Withdrawing &quot;..n)AutoStoreGuildBankItem(b,s)end end" />	 
+				<If Condition="!HasItem(58488)">
+					<CustomBehavior File="Misc\RunLua" Lua="GuildBankTab2Button:Click()" WaitTime="500" />  
+					<CustomBehavior File="Misc\RunLua"  WaitTime="1000" NumOfTimes="3" Lua="local b=2 for s=1,98 do local n=GetGuildBankItemLink(b,s)if n and strfind(n,&quot;58488&quot;)then print(&quot;Withdrawing &quot;..n)AutoStoreGuildBankItem(b,s)end end" />	   
+				</If>
+				<If Condition="!HasItem(58488)">
+					<CustomBehavior File="Misc\RunLua" Lua="GuildBankTab3Button:Click()" WaitTime="500" />   
+					<CustomBehavior File="Misc\RunLua"  WaitTime="1000" NumOfTimes="3" Lua="local b=3 for s=1,98 do local n=GetGuildBankItemLink(b,s)if n and strfind(n,&quot;58488&quot;)then print(&quot;Withdrawing &quot;..n)AutoStoreGuildBankItem(b,s)end end" />	
+				</If>
+				<If Condition="!HasItem(58488)">
+					<CustomBehavior File="Misc\RunLua" Lua="GuildBankTab4Button:Click()" WaitTime="500" />        
+					<CustomBehavior File="Misc\RunLua"  WaitTime="1000" NumOfTimes="3" Lua="local b=4 for s=1,98 do local n=GetGuildBankItemLink(b,s)if n and strfind(n,&quot;58488&quot;)then print(&quot;Withdrawing &quot;..n)AutoStoreGuildBankItem(b,s)end end" />
+				</If>
+				<If Condition="!HasItem(58488)">					
+					<CustomBehavior File="Misc\RunLua" Lua="GuildBankTab5Button:Click()" WaitTime="500" />   
+					<CustomBehavior File="Misc\RunLua"  WaitTime="1000" NumOfTimes="3" Lua="local b=5 for s=1,98 do local n=GetGuildBankItemLink(b,s)if n and strfind(n,&quot;58488&quot;)then print(&quot;Withdrawing &quot;..n)AutoStoreGuildBankItem(b,s)end end" />	
+				</If>
+				<If Condition="!HasItem(58488)">
+					<CustomBehavior File="Misc\RunLua" Lua="GuildBankTab6Button:Click()" WaitTime="500" />      
+					<CustomBehavior File="Misc\RunLua"  WaitTime="1000" NumOfTimes="3" Lua="local b=6 for s=1,98 do local n=GetGuildBankItemLink(b,s)if n and strfind(n,&quot;58488&quot;)then print(&quot;Withdrawing &quot;..n)AutoStoreGuildBankItem(b,s)end end" />
+				</If>
+			</If>
+		</If> 
+		
+		
+		
+				<!-- Vendor at start-->
+		<If Condition="Me.FreeBagSlots &lt;= 32" >
+			<CustomBehavior File="WaitTimer" WaitTime="1000" />
+			<CustomBehavior File="ForceSetVendor" DoRepair="True" DoSell="True" />
+			<CustomBehavior File="WaitTimer" WaitTime="2000" />
+			<CustomBehavior File="DeleteItems" Ids="52371,52378,52385,52365,52374,52376,52383,52368,52388,52386,52375,52382,52364,52370,52367,52377,52372,52363,52366,52379,69820,52369,52373" />
+		</If>

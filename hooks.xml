@@ -1,0 +1,58 @@
+		<!-- Hooks  Hooks  Hooks  Hooks  Hooks  Hooks  Hooks  Hooks  Hooks  Hooks  Hooks  Hooks  Hooks  Hooks  Hooks  Hooks  Hooks  Hooks  Hooks  Hooks  Hooks  Hooks  Hooks  Hooks  Hooks  Hooks  Hooks  Hooks  Hooks  Hooks  -->
+		<!-- Death Behavior-->
+      
+	   <CustomBehavior File="Hooks\DoWhen" ActivityName="CustomDeathHook" TreeHookName="Death_Main" AllowUseDuringCombat="True" AllowExecutionWhileNotAlive="True"  UseWhen="(Me.IsDead &amp;&amp; Me.IsInInstance) &amp;&amp; (deathCounter &lt;= 2)" >
+	   <CustomBehavior File="Misc\RunLua" Lua="RepopMe();" />
+	   <CustomBehavior File="WaitTimer" WaitTime="1000" />
+	   <CustomBehavior File="RunCode" Code="deathCounter++;" />
+	   
+	   </CustomBehavior>
+	   
+	   
+       <CustomBehavior File="Hooks\DoWhen" ActivityName="CustomDeathResetHook"  AllowUseDuringCombat="True" AllowExecutionWhileNotAlive="True"  UseWhen="(Me.IsDead &amp;&amp; Me.IsInInstance) &amp;&amp; (deathCounter &gt;= 3)" >
+          <DisableBehavior Name="Combat" />
+          <DisableBehavior Name="Death" />
+          <CustomBehavior File="Misc\RunLua" Lua="RepopMe();" />
+		    <CustomBehavior File="WaitTimer" WaitTime="1000" />
+			 <CustomBehavior File="Misc\RunLua" Lua="RepopMe();" />
+          <CustomBehavior File="GoThruPortal" Timeout="30000" X="-558.6042" Y="322.9795" Z="115.4839" />
+          <CustomBehavior File="Misc\RunLua" Lua="ResetInstances();"  />
+		  <CustomBehavior File="RunCode" Code="deathCounter=0;" />
+          <CustomBehavior File="RunCode" Code="ProfileManager.LoadNew(ProfileManager.XmlLocation);" />
+          <EnableBehavior Name="Combat" />
+          <EnableBehavior Name="Death" />
+        </CustomBehavior>
+		
+		<CustomBehavior File="Hooks\DoWhen" ActivityName="CustomHearthHook" TreeHookName="Hearth_Main" AllowUseDuringCombat="True" AllowExecutionWhileNotAlive="True"  UseWhen="(!HasArrivedKalimdor() &amp;&amp; HearthIsPriorityLocationKalimdor() &amp;&amp; !InPriorityLocationKalimdor() &amp;&amp; HasHearthKalimdor()) &amp;&amp; (hearthCounter &gt;= 3)" >
+			<CustomBehavior File="RunCode" Code="KalimdorLog(Colors.LightGreen, &quot;Hearthing would be faster to reach our destination, attempting to Hearth!&quot;);" />
+			<CustomBehavior File="ForcedDismount" />
+			<While Condition="!(HasArrivedKalimdor() || InPriorityLocationKalimdor())" >
+				<CustomBehavior File="RunCode" Code="await Coroutine.Wait(1800000, () => HearthIsReadyKalimdor() || InPriorityLocationKalimdor());" />
+				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948); UseItemByName(64488); CastSpellByID(556);" WaitTime="500" />
+				<CustomBehavior File="WaitTimer" WaitTime="50000" TerminateWhen="HasArrivedKalimdor() || InPriorityLocationKalimdor() || CastingInterruptedKalimdor()" />
+			</While>
+			<CustomBehavior File="RunCode" Code="hearthCounter=0;" />
+			<CustomBehavior File="RunCode" Code="ProfileManager.LoadNew(ProfileManager.XmlLocation);" />
+		</CustomBehavior>
+      
+	   <CustomBehavior File="Hooks\DoWhen" ActivityName="CustomMoongladeResetHook"  AllowUseDuringCombat="True" AllowExecutionWhileNotAlive="True"  UseWhen="(moongladeCounter &gt;= 3)" >
+ 	  <CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.Orange, &quot;Reached 3 Teleport trys! Lets fly to the instance .&quot;);" />
+	  	  		<If Condition="(HasItem(64488) &amp;&amp; !WoWSpell.FromId(94719).Cooldown) || (HasItem(6948) &amp;&amp; !WoWSpell.FromId(8690).Cooldown)" >
+				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948); UseItemByName(64488); CastSpellByID(556);" WaitTime="500" />
+				 <CustomBehavior File="WaitTimer" WaitTime="10000" />
+				   <CustomBehavior File="RunCode" Code="ProfileManager.LoadNew(ProfileManager.XmlLocation);" />
+			</If>
+			<If Condition="Me.ZoneId == 493">
+			<MoveTo X="7468.326" Y="-2122.262" Z="492.343" />
+			<CustomBehavior File="TaxiRide" MobId="12740" DestName="Nordrassil" />
+			</If>
+	  <CustomBehavior File="RunCode" Code="ProfileManager.LoadNew(ProfileManager.XmlLocation);" />
+	  </CustomBehavior>
+	  
+
+		<!-- Use Chests -->
+		<CustomBehavior File="Hooks\DoWhen" ActivityName="Open_PChests" UseWhen="HasItem(67539)" AllowUseDuringCombat="true" >
+			<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.Orange, &quot;Opening Tiny Treasure Chest!.&quot;);" />
+			<CustomBehavior File="UseItem" ItemId="67539" NumOfTimes="500" TerminateWhen="!HasItem(67539)" />
+      <CustomBehavior File="WaitTimer" WaitTime="100" />
+		</CustomBehavior>

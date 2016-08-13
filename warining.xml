@@ -1,0 +1,3 @@
+ <CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.Red, &quot;Please note that this profile will deposit gold and items on your guildbank \n if you dont want this stop the bot now!&quot;);" />
+  <CustomBehavior File="WaitTimer" WaitTime="8000" TerminateWhen="Me.IsMoving" />
+<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.Orange, &quot;This Profile contains mining guildbank deposit and hardcore pullroutine&quot;);" />
