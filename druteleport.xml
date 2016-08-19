@@ -1,0 +1,40 @@
+      <If Condition="Me.Class == WoWClass.Druid">
+        <CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;Use Teleport: Moonglade&quot;);" />
+		<If Condition="Me.ZoneId == 5723">
+        <CustomBehavior File="RunCode" Code="SpellManager.Cast(18960); await Coroutine.Sleep(20000);" />
+		</If>
+        <CustomBehavior File="WaitTimer" WaitTime="1000" />
+        <CustomBehavior File="Misc\RunLua" Lua="ResetInstances();"  />
+
+ 		<If Condition="Me.ZoneId == 493"><!-- First Try -->
+		        <CustomBehavior File="Misc\RunLua" Lua="ResetInstances();"  />
+			<CustomBehavior File="RunCode" Code="SpellManager.Cast(18960); await Coroutine.Sleep(20000);" />
+				<If Condition="Me.ZoneId == 493">
+					<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.Orange, &quot;Teleport Nr 1 unsuccessful  &quot;);" />
+					<CustomBehavior File="WaitTimer" WaitTime="40000" />
+				</If>
+		</If>
+		 		<If Condition="Me.ZoneId == 493"><!-- 2nd Try -->
+		        <CustomBehavior File="Misc\RunLua" Lua="ResetInstances();"  />
+			<CustomBehavior File="RunCode" Code="SpellManager.Cast(18960); await Coroutine.Sleep(20000);" />
+				<If Condition="Me.ZoneId == 493">
+					<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.Orange, &quot;Teleport Nr 2 unsuccessful  &quot;);" />
+					<CustomBehavior File="WaitTimer" WaitTime="40000" />
+				</If>
+		</If>
+		 		<If Condition="Me.ZoneId == 493"><!-- 3rd Try-->
+		        <CustomBehavior File="Misc\RunLua" Lua="ResetInstances();"  />
+			<CustomBehavior File="RunCode" Code="SpellManager.Cast(18960); await Coroutine.Sleep(20000);" />
+				<If Condition="Me.ZoneId == 493">
+					<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.Orange, &quot;Teleport Nr 3 unsuccessful  &quot;);" />
+				</If>
+		</If>
+			<If Condition="Me.ZoneId == 493">
+			<MoveTo Nav="Fly" X="7468.326" Y="-2122.262" Z="492.343" />
+			<CustomBehavior File="TaxiRide" MobId="12740" DestName="Nordrassil" />
+			</If>
+			<If Condition="Me.ZoneId == 616">
+			<MoveTo Nav="Fly" X="3987.989" Y="-2944.655" Z="1002.547"  />
+			</If>
+        <CustomBehavior File="RunCode" Code="waitCounter++;" /> 
+      </If>
